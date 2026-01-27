@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,26 +70,29 @@ export default function Home() {
   const editTodo = (todo) => {
     setTodo(todo);
   };
-
+const {router} = useRouter()
   return (
     <div
-      className={`${inter.className} ${jetbrainsMono.className} relative  bg-black/50 hover:-bg-linear-120 flex  w-full justify-center  font-sans dark:bg-black/10`}
+      className={`${inter.className} ${jetbrainsMono.className} relative md:h-screen overflow-hidden bg-black/50 hover:-bg-linear-120 flex md:flex-row flex-col w-screen justify-center  font-sans dark:bg-black/10`}
     >
-      <div className="flex h-screen    sticky left-0 top-0 w-190  flex-col bg-dark  items-start justify-between py-32 px-12 bg-dark dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 w-full  text-center sm:items-start sm:text-left">
-          <h1 className=" text-[40pt] font-semibold leading-12  text-zinc-100 dark:text-zinc-50">
+      <div className="flex md:h-screen md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
+        <div className="flex flex-col md:items-start gap-6 w-full   md:text-start sm:items-start sm:text-left">
+          <h1 className=" md:text-[40pt] text-[20pt] font-bold md:leading-12 leading-0  text-zinc-100 dark:text-zinc-50">
             Ogunmakinju Enioluwa
           </h1>
-          <p className="max-w-md text-[18pt] font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+          <p className="max-w-md md:text-[18pt] text-[14pt] font-medium md:pb-6 text-zinc-100 dark:text-zinc-200">
             Frontend Engineer
           </p>
           <p
-            className={`${jetbrainsMono.className} max-w-xl text-xl leading-8 text-zinc-400 dark:text-zinc-400`}
+            className={`${jetbrainsMono.className} max-w-xl md:text-xl text-[12pt] md:leading-8 text-zinc-400 dark:text-zinc-400`}
           >
             I build accessible, pixel-perfect digital experiences for the web.
           </p>
-          <div className=" w-full pt-8">
-            <div className="group flex flex-row items-center py-4 cursor-pointer">
+          <div className=" w-full md:pt-8 md:flex md:flex-col hidden">
+            <a
+              href="#about"
+              className="group flex flex-row items-center py-4 cursor-pointer"
+            >
               <div
                 className="
       w-10 h-0.5 mr-4
@@ -102,8 +106,11 @@ export default function Home() {
               <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
                 About
               </p>
-            </div>
-            <div className="group flex flex-row items-center py-4 cursor-pointer">
+            </a>
+            <a
+              href="#experience"
+              className="group flex flex-row items-center py-4 cursor-pointer"
+            >
               <div
                 className="
       w-10 h-0.5 mr-4
@@ -117,8 +124,11 @@ export default function Home() {
               <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
                 Experience
               </p>
-            </div>
-            <div className="group flex flex-row items-center py-4 cursor-pointer">
+            </a>
+            <a
+              href="#projects"
+              className="group flex flex-row items-center py-4 cursor-pointer"
+            >
               <div
                 className="
       w-10 h-0.5 mr-4
@@ -132,16 +142,21 @@ export default function Home() {
               <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
                 Project
               </p>
-            </div>
+            </a>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row items-center">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+        <div className="flex pt-6 md:pt-0  md:gap-4 flex-row items-center">
+          <a
+            href="https://www.linkedin.com/in/adewunmienitan1755"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-2 md:mr-0"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              className="w-12.5 h-12.5 text-gray-400 hover:text-gray-600 transition-colors"
+              className="md:w-12.5 w-10 h-8 md:h-12.5 text-gray-400 hover:text-gray-600 transition-colors"
               fill="currentColor"
             >
               <path d="M18.72 4H5.37C4.62 4 4 4.62 4 5.25V18.63C4 19.38 4.62 20 5.37 20H18.72C19.38 20 20 19.38 20 18.63V5.25C20 4.62 19.38 4 18.72 4ZM9 17.34H6.67V10.21H9V17.34ZM7.83 9.13C7.25 9.13 6.78 8.66 6.78 8.08C6.78 7.5 7.25 7.03 7.83 7.03C8.41 7.03 8.88 7.5 8.88 8.08C8.88 8.66 8.41 9.13 7.83 9.13ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.44 11.87 13.13 12.14 13.02 12.4C12.98 12.51 12.97 12.66 12.97 12.81V17.34H10.63V10.21H12.97V11.18C13.28 10.71 13.86 10.21 14.78 10.21C16.11 10.21 17.34 11.08 17.34 13.13V17.34Z" />
@@ -157,7 +172,7 @@ export default function Home() {
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="w-10.i8 h-10 text-gray-400 hover:text-gray-600 transition-colors"
+              className="md:w-12.5 w-10 h-6 md:h-12.5 text-gray-400 hover:text-gray-600 transition-colors"
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
@@ -228,11 +243,17 @@ export default function Home() {
           </a> */}
         </div>
       </div>
-      <div className="  h-full items-start  w-190 flex-col  justify-between py-32 px-12  dark:bg-black sm:items-start">
+      <div className="  h-full items-start  md:w-4xl w-full flex-col  overflow-y-scroll  justify-between px-4 py-4 md:px-12 md:py-32  dark:bg-black sm:items-start">
+        <p className="text-[13pt] block md:hidden font-semibold py-6 text-zinc-400 dark:text-zinc-400">
+          About
+        </p>
         <div w="full">
-          <div className="flex flex-col items-center gap-6 h-full sm:items-start sm:text-left">
+          <div
+            id="about"
+            className="flex flex-col items-center gap-6 h-full sm:items-start sm:text-left"
+          >
             <p
-              className={`${inter.className} max-w-[95%] text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+              className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
             >
               Hi! I’m a frontend developer who embarked on my coding journey in
               2023, and I’ve been hooked ever since. I love turning ideas into
@@ -242,7 +263,7 @@ export default function Home() {
               rely on Redux Toolkit and Redux Query.
             </p>
             <p
-              className={`${inter.className} max-w-[95%] text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+              className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
             >
               I’m currently working as a freelance frontend developer,
               collaborating with clients to build modern, user-focused
@@ -251,7 +272,7 @@ export default function Home() {
               continue to grow and contribute to impactful products.
             </p>
             <p
-              className={`${inter.className} max-w-[95%] text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+              className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
             >
               I’ve had the opportunity to work on real-world products across
               different industries, including a rental platform, a medical web
@@ -262,24 +283,30 @@ export default function Home() {
               with teams to deliver reliable digital experiences.
             </p>
             <p
-              className={`${inter.className} max-w-[95%] text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+              className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
             >
               In my free time, I love learning new things, experimenting with
               new technologies, and finding inspiration in how others build and
               design for the web.
             </p>
           </div>
-          <div className="w-full  hover:bg-zinc-800 mt-8 p-4 rounded-2xl ">
-            <div className="flex flex-row  items-start  justify-center">
-              <p className="text-[13pt] font-medium  pb-6 text-zinc-400 dark:text-zinc-200">
+          <p className="text-[13pt] block md:hidden font-semibold py-6 text-zinc-400 dark:text-zinc-400">
+            Experience
+          </p>
+          <div
+            id="experience"
+            className="w-full  hover:bg-zinc-800 md:mt-8 md:p-4 p-2 rounded-2xl "
+          >
+            <div className="flex md:flex-row flex-col  items-start  justify-center">
+              <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                 July 2025 - October 2025
               </p>
               <div className="w-full">
-                <p className="text-[13pt] font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium pb-6 text-zinc-100 dark:text-zinc-200">
                   Frontend Developer (Contract) | James Consulting
                 </p>
                 <p
-                  className={`${inter.className} max-w-full text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+                  className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                 >
                   collaborated closely with other developers to enhance user
                   interfaces on a social media application, contributed to the
@@ -293,18 +320,18 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full  hover:bg-zinc-800 mt-8 p-4 rounded-2xl ">
-            <div className="flex flex-row  items-start  justify-center">
-              <p className="text-[13pt] font-medium  pb-6 text-zinc-400 dark:text-zinc-200">
+            <div className="flex md:flex-row flex-col  items-start  justify-center">
+              <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                 February 2025 – June 2025
               </p>
               <div className="w-full">
-                <p className="text-[13pt] font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium pb-6 text-zinc-100 dark:text-zinc-200">
                   Frontend Developer (Contract) | GuruSys
                 </p>
                 <p
-                  className={`${inter.className} max-w-full text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+                  className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                 >
-                  collaborated closely with other developers to enhance user
+                  Collaborated closely with other developers to enhance user
                   interfaces on a social media application, contributed to the
                   development of web applications using Next.js, Chakra UI,
                   JavaScript, Redux Toolkit, and RTK Query, and actively
@@ -317,16 +344,16 @@ export default function Home() {
           </div>
 
           <div className="w-full  hover:bg-zinc-800 mt-8 p-4 rounded-2xl ">
-            <div className="flex flex-row  items-start  justify-center">
-              <p className="text-[13pt] font-medium  pb-6 text-zinc-400 dark:text-zinc-200">
+            <div className="flex md:flex-row flex-col  items-start  justify-center">
+              <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                 Jan 2023 - October 2024
               </p>
               <div className="w-full">
-                <p className="text-[13pt] font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal  font-medium pb-6 text-zinc-100 dark:text-zinc-200">
                   Frontend Developer | TechySuite (2023–2024)
                 </p>
                 <p
-                  className={`${inter.className} max-w-full text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+                  className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                 >
                   Worked alongside senior developers to build and enhance user
                   interfaces for web and mobile applications. Gained hands-on
@@ -338,10 +365,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center py-12 gap-4 text-base font-medium sm:flex-row">
+          <div className="flex flex-col items-center justify-center md:py-12 py-6 gap-4 text-base font-medium sm:flex-row">
             <a
-              className="flex h-12 px-8 items-center my-6 justify-center gap-2 rounded-full bg-zinc-800  text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] "
-              href="#"
+              className="flex md:h-12 md:px-8 px-3 h-10 text-sm md:text-lg items-center my-6 justify-center gap-2 rounded-full bg-zinc-800  text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] "
+              href="https://docs.google.com/document/d/1E94Z4t25wpa_jhDtmVeaEUzIv3tr04GK2i3-IlfX_dk/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -356,22 +383,24 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div>
+        <div id="projects">
           <div className="w-full  hover:bg-zinc-800 mt-8 p-4 rounded-2xl ">
-            <div className="flex flex-row  items-start   justify-center">
+            <button onClick={()=>{router.push("/todo");}}
+              className="flex flex-row  items-start   justify-center"
+            >
               <div>
                 <img
                   src="/todo.png"
                   alt="a basic todo app that has a search functionality"
-                  className="h-[150] w-[350] pr-6"
+                  className="min-h-50 max-h-50 min-w-50 pr-6 md:block hidden"
                 />
               </div>
-              <div className="w-full">
-                <p className="text-[13pt] font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+              <div className="flex flex-col  items-start  justify-center">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                   Build a todo app with crud and search functionlality
                 </p>
                 <p
-                  className={`${inter.className} max-w-full text-xl leading-8 text-zinc-400 dark:text-zinc-100`}
+                  className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                 >
                   A simple and well understandable tutorial on how to build a
                   todo app, search items on the list of todos, edit items,
@@ -379,9 +408,53 @@ export default function Home() {
                   includes the simple way to use some of the javascript tools
                   such as Map and Filter.
                 </p>
+                <a href="https://turkishmedicine.vercel.app/medical.html">
+                  <img
+                    src="/todo.png"
+                    alt="a simple static website for a health business"
+                    className="h-[150] w-[350] pr-6 md:hidden block"
+                  />
+                </a>
+              </div>
+            </button>
+          </div>
+          <div className="w-full  hover:bg-zinc-800 md:4 md:mt-8 p-4 rounded-2xl ">
+            <div className="flex md:flex-row flex-col  items-start   justify-center">
+              <a href="https://turkishmedicine.vercel.app/medical.html">
+                <img
+                  src="/projects2.png"
+                  alt="a simple static website for a health business"
+                  className="min-h-50 max-h-50 min-w-50 pr-6 md:block hidden"
+                />
+              </a>
+              <div className="flex  flex-col  py-4 md:py-0 items-start  justify-center">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
+                  Built a simple static website for a business
+                </p>
+                <p
+                  className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                >
+                  A simple statis website built for a business just to show an
+                  online presence of the business. The website was built with
+                  Html, tailwindCss and AlpineJs
+                </p>
+                <a href="https://turkishmedicine.vercel.app/medical.html">
+                  <img
+                    src="/projects2.png"
+                    alt="a simple static website for a health business"
+                    className="h-[150] w-[350] pr-6 md:hidden block"
+                  />
+                </a>
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <p
+            className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+          >
+            {/* Portfolio design inspired by a  */}
+          </p>
         </div>
       </div>
     </div>

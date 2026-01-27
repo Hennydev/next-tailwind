@@ -66,12 +66,42 @@ const Todo = () => {
 
   return (
     <div
-      className={`${inter.className} ${jetbrainsMono.className} p-16 flex flex-col items-center justify-center`}
+      className={`${inter.className} ${jetbrainsMono.className}  flex flex-col py-16 items-center justify-center`}
     >
-      <h1 className="text-white font-bold text-center text-3xl ">
-        Todo List with Search Functionality in Reactjs and Tailwind Css
-      </h1>
-      <div className=" bg-black/60 md:h-200 md:w-200 w-[80vw] min-h-[80vh]  flex flex-col items-center py-12 my-16 px-12 relative">
+      <div className="flex flex-row  items-center justify-center relative w-full">
+        <a
+          href="/"
+          className="text-white absolute left-10 animate-pulse font-bold text-center text-md "
+        >
+          <svg
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#ffffff"
+            className="w-10.i8 h-10  hover:text-gray-600 transition-colors"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#ffffff"
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+              ></path>
+              <path
+                fill="#ffffff"
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <h1 className="text-white font-bold text-center text-3xl ">
+          Todo List with Search Functionality in Reactjs and Tailwind Css
+        </h1>
+      </div>
+      <div className=" bg-black/60 md:h-200 md:w-200 w-[80vw] min-h-[80vh] px-16  flex flex-col items-center py-12 my-16 px-12 relative">
         <h1 className=" text-center text-white font-semibold text-2xl pb-6">
           Todo List
         </h1>
@@ -85,9 +115,8 @@ const Todo = () => {
               className="border border-solid rounded-lg w-full py-3 px-3"
               placeholder="Search your todo..."
             ></input>
-            {search.trim().length > 0 && filterList.map((item) => (
-              <p className="pt-4">{item.task}</p>
-            ))}
+            {search.trim().length > 0 &&
+              filterList.map((item) => <p className="pt-4">{item.task}</p>)}
           </div>
           <div className="pt-6 md:h-150 h:[85vh] overflow-y-scroll  ">
             {todoList.map((item) => (
