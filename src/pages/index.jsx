@@ -73,7 +73,7 @@ export default function Home() {
 const {router} = useRouter()
   return (
     <div
-      className={`${inter.className} ${jetbrainsMono.className} relative md:h-screen overflow-hidden bg-black/50 hover:-bg-linear-120 flex md:flex-row flex-col w-screen justify-center  font-sans dark:bg-black/10`}
+      className={`${inter.className} ${jetbrainsMono.className} md:px-12 px-4 relative md:h-screen overflow-hidden bg-black/50 hover:-bg-linear-120 flex md:flex-row flex-col w-screen justify-center  font-sans dark:bg-black/10`}
     >
       <div className="flex md:h-screen md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
         <div className="flex flex-col md:items-start gap-6 w-full   md:text-start sm:items-start sm:text-left">
@@ -385,7 +385,10 @@ const {router} = useRouter()
         </div>
         <div id="projects">
           <div className="w-full  hover:bg-zinc-800 mt-8 p-4 rounded-2xl ">
-            <button onClick={()=>{router.push("/todo");}}
+            <button
+              onClick={() => {
+                router.push("/todo");
+              }}
               className="flex flex-row  items-start   justify-center"
             >
               <div>
@@ -395,7 +398,7 @@ const {router} = useRouter()
                   className="min-h-50 max-h-50 min-w-50 pr-6 md:block hidden"
                 />
               </div>
-              <div className="flex flex-col  items-start  justify-center">
+              <div className="flex  flex-col  py-4 md:py-0 items-start  justify-center">
                 <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                   Build a todo app with crud and search functionlality
                 </p>
