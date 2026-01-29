@@ -73,7 +73,7 @@ export default function Home() {
 const {router} = useRouter()
   return (
     <div
-      className={`${inter.className} ${jetbrainsMono.className}  w-screen   bg-black/50 hover:-bg-linear-120  font-sans dark:bg-black/10`}
+      className={`${inter.className} ${jetbrainsMono.className} w-screen  md:w-8xl mx-auto   bg-black/50 hover:-bg-linear-120  font-sans dark:bg-black/10`}
     >
       <div className="md:w-[80% ] mx-auto flex md:flex-row flex-col justify-center   relative h-full md:h-screen overflow-hidden">
         <div className="flex md:h-screen md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
