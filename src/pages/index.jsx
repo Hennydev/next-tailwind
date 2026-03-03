@@ -44,8 +44,8 @@ export default function Home() {
                 task: todo.task,
                 done: status,
               }
-            : item
-        )
+            : item,
+        ),
       );
     } else {
       setTodos((prev) => [...prev, newTodo]);
@@ -58,28 +58,28 @@ export default function Home() {
     setTodos((prev) => prev.filter((item) => item.id !== id));
   };
   const filteredTodos = todos.filter((item) =>
-    item.task.toLowerCase().includes(search.toLowerCase())
+    item.task.toLowerCase().includes(search.toLowerCase()),
   );
   const updateStatus = (todo) => {
     setTodos((prev) =>
       prev.map((item) =>
-        item.id === todo.id ? { ...item, done: !item.done } : item
-      )
+        item.id === todo.id ? { ...item, done: !item.done } : item,
+      ),
     );
   };
   const editTodo = (todo) => {
     setTodo(todo);
   };
-const {router} = useRouter()
+  const { router } = useRouter();
   return (
     <div
-      className={`${inter.className} ${jetbrainsMono.className}  w-screen   bg-black/50 hover:-bg-linear-120  font-sans dark:bg-black/10`}
+      className={`${inter.className} ${jetbrainsMono.className}  w-full   bg-black/50 hover:-bg-linear-120  font-sans dark:bg-black/10`}
     >
-      <div className="md:w-[80% ] mx-auto flex md:flex-row flex-col justify-center   relative h-full md:h-screen overflow-hidden">
+      <div className="md:w-[80%] mx-auto flex md:flex-row flex-col justify-center   relative h-full md:h-screen overflow-hidden">
         <div className="flex md:h-screen md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
           <div className="flex flex-col md:items-start gap-6 w-full   md:text-start sm:items-start sm:text-left">
             <h1 className=" md:text-[40pt] text-[20pt] font-bold md:leading-12 leading-0  text-zinc-100 dark:text-zinc-50">
-              Ogunmakinju Enioluwa
+              Adewunmi Enitan
             </h1>
             <p className="max-w-md md:text-[18pt] text-[14pt] font-medium md:pb-6 text-zinc-100 dark:text-zinc-200">
               Frontend Engineer
@@ -300,6 +300,30 @@ const {router} = useRouter()
             >
               <div className="flex md:flex-row flex-col  items-start  justify-center">
                 <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
+                  Nov 2025 - Present
+                </p>
+                <div className="w-full">
+                  <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium pb-6 text-zinc-100 dark:text-zinc-200">
+                    Freelance Frontend Developer
+                  </p>
+                  <p
+                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                  >
+                    Design and develop scalable web and mobile applications for
+                    business clients. Implement responsive UI components and
+                    interactive features to enhance user experience. Manage
+                    projects from concept to deployment, ensuring timely
+                    delivery and client satisfaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              id="experience"
+              className="w-full  hover:bg-zinc-800 md:mt-8 md:p-4 p-2 rounded-2xl "
+            >
+              <div className="flex md:flex-row flex-col  items-start  justify-center">
+                <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-medium  md:pb-6 text-zinc-400 dark:text-zinc-200">
                   July 2025 - October 2025
                 </p>
                 <div className="w-full">
@@ -369,7 +393,7 @@ const {router} = useRouter()
             <div className="flex flex-col items-center justify-center md:py-12 py-6 gap-4 text-base font-medium sm:flex-row">
               <a
                 className="flex md:h-12 md:px-8 px-3 h-10 text-sm md:text-lg items-center my-6 justify-center gap-2 rounded-full bg-zinc-800  text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] "
-                href="https://docs.google.com/document/d/1E94Z4t25wpa_jhDtmVeaEUzIv3tr04GK2i3-IlfX_dk/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1JKY4wKspFo0IER0QvoVEEbX5c1MpLyeX27UVyTSh8xk/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
