@@ -76,20 +76,21 @@ export default function Home() {
       className={`${inter.className} ${jetbrainsMono.className}  w-full   bg-black/50 hover:-bg-linear-120  font-sans dark:bg-black/10`}
     >
       <div className="md:w-[80%] mx-auto flex md:flex-row flex-col justify-center   relative h-full md:h-screen overflow-hidden">
-        <div className="flex md:h-screen md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
-          <div className="flex flex-col md:items-start gap-6 w-full   md:text-start sm:items-start sm:text-left">
-            <h1 className=" md:text-[40pt] text-[20pt] font-bold md:leading-12 leading-0  text-zinc-100 dark:text-zinc-50">
+        <div className="flex md:h-screen h-full md:sticky md:left-0 md:top-0 md:w-4xl w-full flex-col bg-dark  items-start md:justify-between px-4 pt-16 md:px-12 md:py-32 bg-dark dark:bg-black sm:items-start">
+          <div className="flex md:h-[80vh] h-full  flex-col md:items-start gap-4 w-full   md:text-start sm:items-start sm:text-left">
+            <h1 className=" md:text-[40pt] text-[16pt] font-bold md:leading-14 leading-0  text-zinc-100 dark:text-zinc-50">
               Adewunmi Enitan
             </h1>
-            <p className="max-w-md md:text-[18pt] text-[14pt] font-medium md:pb-6 text-zinc-100 dark:text-zinc-200">
+            <p className="max-w-md md:text-[14pt] text-[14pt] font-medium md:pb-2 text-zinc-100 dark:text-zinc-200">
               Frontend Engineer
             </p>
             <p
-              className={`${jetbrainsMono.className} max-w-xl md:text-xl text-[12pt] md:leading-8 text-zinc-400 dark:text-zinc-400`}
+              className={`${jetbrainsMono.className} max-w-xl md:text-sm text-[12pt] md:leading-8 text-zinc-400 dark:text-zinc-400`}
             >
-              I build accessible, pixel-perfect digital experiences for the web.
+              I build accessible, pixel-perfect digital experiences for the web
+              and mobile
             </p>
-            <div className=" w-full md:pt-8 md:flex md:flex-col hidden">
+            <div className=" w-full md:pt-2 md:flex md:flex-col hidden">
               <a
                 href="#about"
                 className="group flex flex-row items-center py-4 cursor-pointer"
@@ -104,7 +105,7 @@ export default function Home() {
     "
                 ></div>
 
-                <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
+                <p className="text-zinc-400 group-hover:text-zinc-100 text-md">
                   About
                 </p>
               </a>
@@ -122,7 +123,7 @@ export default function Home() {
     "
                 ></div>
 
-                <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
+                <p className="text-zinc-400 group-hover:text-zinc-100 text-md">
                   Experience
                 </p>
               </a>
@@ -140,14 +141,14 @@ export default function Home() {
     "
                 ></div>
 
-                <p className="text-zinc-400 group-hover:text-zinc-100 text-xl">
+                <p className="text-zinc-400 group-hover:text-zinc-100 text-md">
                   Project
                 </p>
               </a>
             </div>
           </div>
 
-          <div className="flex pt-6 md:pt-0  md:gap-4 flex-row items-center">
+          <div className="flex pt-6 md:pt-4  md:gap-2 flex-row items-center">
             <a
               href="https://www.linkedin.com/in/adewunmienitan1755"
               target="_blank"
@@ -157,7 +158,7 @@ export default function Home() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                className="md:w-12.5 w-10 h-8 md:h-12.5 text-gray-400 hover:text-gray-600 transition-colors"
+                className="md:w-12.5 w-10 h-8 md:h-10 text-gray-400 hover:text-gray-600 transition-colors"
                 fill="currentColor"
               >
                 <path d="M18.72 4H5.37C4.62 4 4 4.62 4 5.25V18.63C4 19.38 4.62 20 5.37 20H18.72C19.38 20 20 19.38 20 18.63V5.25C20 4.62 19.38 4 18.72 4ZM9 17.34H6.67V10.21H9V17.34ZM7.83 9.13C7.25 9.13 6.78 8.66 6.78 8.08C6.78 7.5 7.25 7.03 7.83 7.03C8.41 7.03 8.88 7.5 8.88 8.08C8.88 8.66 8.41 9.13 7.83 9.13ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.44 11.87 13.13 12.14 13.02 12.4C12.98 12.51 12.97 12.66 12.97 12.81V17.34H10.63V10.21H12.97V11.18C13.28 10.71 13.86 10.21 14.78 10.21C16.11 10.21 17.34 11.08 17.34 13.13V17.34Z" />
@@ -173,7 +174,7 @@ export default function Home() {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                className="md:w-12.5 w-10 h-6 md:h-12.5 text-gray-400 hover:text-gray-600 transition-colors"
+                className="md:w-12.5 w-10 h-6 md:h-8 text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
@@ -254,7 +255,7 @@ export default function Home() {
               className="flex flex-col items-center gap-6 h-full sm:items-start sm:text-left"
             >
               <p
-                className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                className={`${inter.className} md:max-w-[95%] w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
               >
                 Hi! I’m a frontend developer who embarked on my coding journey
                 in 2023, and I’ve been hooked ever since. I love turning ideas
@@ -264,7 +265,7 @@ export default function Home() {
                 rely on Redux Toolkit and Redux Query.
               </p>
               <p
-                className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                className={`${inter.className} md:max-w-[95%] w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
               >
                 I’m currently working as a freelance frontend developer,
                 collaborating with clients to build modern, user-focused
@@ -273,7 +274,7 @@ export default function Home() {
                 can continue to grow and contribute to impactful products.
               </p>
               <p
-                className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                className={`${inter.className} md:max-w-[95%] w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
               >
                 I’ve had the opportunity to work on real-world products across
                 different industries, including a rental platform, a medical web
@@ -284,7 +285,7 @@ export default function Home() {
                 with teams to deliver reliable digital experiences.
               </p>
               <p
-                className={`${inter.className} md:max-w-[95%] w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                className={`${inter.className} md:max-w-[95%] w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
               >
                 In my free time, I love learning new things, experimenting with
                 new technologies, and finding inspiration in how others build
@@ -307,7 +308,7 @@ export default function Home() {
                     Freelance Frontend Developer
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     Design and develop scalable web and mobile applications for
                     business clients. Implement responsive UI components and
@@ -331,7 +332,7 @@ export default function Home() {
                     Frontend Developer (Contract) | James Consulting
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     collaborated closely with other developers to enhance user
                     interfaces on a social media application, contributed to the
@@ -354,7 +355,7 @@ export default function Home() {
                     Frontend Developer (Contract) | GuruSys
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     Collaborated closely with other developers to enhance user
                     interfaces on a social media application, contributed to the
@@ -378,7 +379,7 @@ export default function Home() {
                     Frontend Developer | TechySuite (2023–2024)
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     Worked alongside senior developers to build and enhance user
                     interfaces for web and mobile applications. Gained hands-on
@@ -415,6 +416,39 @@ export default function Home() {
               Projects
             </p>
             <div className="w-full  hover:bg-zinc-800 rounded-2xl p-4  md:mt-4 mt-2">
+              <div
+
+                className="flex flex-row  items-start   justify-center"
+              >
+                <div>
+                  <img
+                    src="/dashboard.png"
+                    alt="a basic todo app that has a search functionality"
+                    className="min-h-50 max-h-40  min-w-50 pr-6 md:block hidden"
+                  />
+                </div>
+                <div className="flex  flex-col  py-4 md:py-0 items-start  justify-start">
+                  <p className="md:text-[13pt] text-sm leading-6 md:leading-normal font-semibold  text-start md:pb-6 pb-2 text-zinc-400 dark:text-zinc-200">
+                    An Admin Dashboard
+                  </p>
+                  <p
+                    className={`${inter.className} max-w-full md:text-md text-sm  text-start leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                  >
+                    A centralized interface that allows administrators to
+                    monitor, manage, and control key aspects of an application
+                    or system.
+                  </p>
+                  <a href="https://custom-dashboard-fe.vercel.app">
+                    <img
+                      src="/dashboard.png"
+                      alt="an admin dashboard"
+                      className="h-[150] w-[350] pr-6 md:hidden block"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="w-full  hover:bg-zinc-800 rounded-2xl p-4  md:mt-4 mt-2">
               <button
                 onClick={() => {
                   router.push("/todo");
@@ -425,7 +459,7 @@ export default function Home() {
                   <img
                     src="/todo.png"
                     alt="a basic todo app that has a search functionality"
-                    className="min-h-50 max-h-50 min-w-50 pr-6 md:block hidden"
+                    className="min-h-50 max-h-40  min-w-50 pr-6 md:block hidden"
                   />
                 </div>
                 <div className="flex  flex-col  py-4 md:py-0 items-start  justify-start">
@@ -433,7 +467,7 @@ export default function Home() {
                     Build a todo app with crud and search functionlality
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm  text-start leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm  text-start leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     A simple and well understandable tutorial on how to build a
                     todo app, search items on the list of todos, edit items,
@@ -457,7 +491,7 @@ export default function Home() {
                   <img
                     src="/projects2.png"
                     alt="a simple static website for a health business"
-                    className="min-h-50 max-h-50 min-w-50 pr-6 md:block hidden"
+                    className="min-h-50 max-h-40  min-w-50 pr-6 md:block hidden"
                   />
                 </a>
                 <div className="flex  flex-col  py-4 md:py-0 items-start  justify-center">
@@ -465,7 +499,7 @@ export default function Home() {
                     Built a simple static website for a business
                   </p>
                   <p
-                    className={`${inter.className} max-w-full md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+                    className={`${inter.className} max-w-full md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
                   >
                     A simple statis website built for a business just to show an
                     online presence of the business. The website was built with
@@ -484,7 +518,7 @@ export default function Home() {
           </div>
           <div>
             <p
-              className={`${inter.className} max-w-full md:py-6 py-2 text-center md:text-xl text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
+              className={`${inter.className} max-w-full md:py-6 py-2 text-center md:text-md text-sm leading-6 md:leading-8 text-zinc-400 dark:text-zinc-100`}
             >
               Developed by Hennydev
             </p>
